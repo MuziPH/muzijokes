@@ -6,4 +6,19 @@
 { "id": 7, "joke": "Chuck Norris sheds his skin twice a year."}, 
 { "id": 8, "joke": "Chuck Norris once challenged Lance Armstrong in a &quot;Who has more testicles?&quot; contest. Chuck Norris won by 5."}, 
 { "id": 9, "joke": "There are no steroids in baseball. Just players Chuck Norris has breathed on."}, 
-{ "id": 10, "joke": "When Chuck Norris goes to donate blood, he declines the syringe, and instead requests a hand gun and a bucket."}, 
+{ "id": 10, "joke": "When Chuck Norris goes to donate blood, he declines the syringe, and instead requests a hand gun and a bucket."},
+
+func NewJokes() *Jokes {
+	jokes := Jokes{
+		{Id: 1, Joke: "Chuck Norris uses ribbed condoms inside out, so he gets the pleasure."},
+		{Id: 2, Joke: "MacGyver can build an airplane out of gum and paper clips. Chuck Norris can kill him and take it."},
+		{Id: 3, Joke: "Chuck Norris doesn't read books. He stares them down until he gets the information he wants."},
+		{Id: 5, Joke: "Chuck Norris lost his virginity before his dad did."},
+		{Id: 6, Joke: "Since 1940, the year Chuck Norris was born, roundhouse kick related deaths have increased 13,000 percent."},
+		{Id: 7, Joke: "Chuck Norris sheds his skin twice a year."},
+		{Id: 8, Joke: "Chuck Norris once challenged Lance Armstrong in a &quot;Who has more testicles?&quot; contest. Chuck Norris won by 5."},
+		{Id: 9, Joke: "There are no steroids in baseball. Just players Chuck Norris has breathed on."},
+		{Id: 10, Joke: "When Chuck Norris goes to donate blood, he declines the syringe, and instead requests a hand gun and a bucket."},
+	}
+	return &jokes
+}

@@ -12,6 +12,11 @@ type Joke struct {
 	Joke string `json:Joke`
 }
 
+type User struct {
+	Name    string `json:"name"`
+	Anumber string `json:"anumber"`
+}
+
 var jokes []Joke
 
 func JokeDAO() {
@@ -45,3 +50,17 @@ func RandJoke(w http.ResponseWriter, req *http.Request) {
 		} // end if
 	} // end for loop
 } // end RandJOke
+
+func NameWriter(w http.ResponseWriter, req *http.Request) {
+	var user User
+	if req.Body == nil {
+		http.Error(w, "Please send a request body", 400)
+		return
+	}
+	err := json.NewDecoder(req.Body).Decode(&user)
+	if err != nil {
+		http.Error(w, err.Error(), 400)
+		return
+	}
+	fmt.Fprint(w, "Your name is: "+user.Name)
+}
